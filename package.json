@@ -1,0 +1,28 @@
+{
+  "name": "Friend_Finder",
+  "version": "1.0.0",
+  "description": "Compatibility-based \"FriendFinder\" application. This full-stack site will take in results from users' surveys, then compare their answers with those from other users and then display the name and picture of the user with the best overall match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avakrishn/Friend_Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avakrishn/Friend_Finder/issues"
+  },
+  "homepage": "https://github.com/avakrishn/Friend_Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
+}
