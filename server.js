@@ -12,13 +12,13 @@ var validUrl = require('valid-url');
 var methodOverride = require('method-override');
 // var bcrypt = require('bcryptjs');
 var bodyParser = require('body-parser');
-// var cookieParser = require('cookie-parser');
-// var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var path = require("path");
 
 app.use(methodOverride('_method'));
-// app.use(session({ secret: 'app', cookie: { maxAge: 1*1000*60*60*24*365 }}));
-// app.use(cookieParser());
+app.use(session({ secret: 'app', cookie: { maxAge: 1*1000*60*60*24*365 }}));
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -57,13 +57,23 @@ app.post('/create_user', function(req, res){
   console.log(req.body);
   // console.log(validUrl.isWebUri(req.body.picture_link));
 
-  // if the user has filled in all fields insert information into database and the picture link is a valid url
-  if(req.body.username && validUrl.isWebUri(req.body.picture_link)){
+  // if the user has filled in a picture link that is a valid url
+  if( validUrl.isWebUri(req.body.picture_link)){
       
     connection.query('INSERT INTO users (username, picture_link) VALUES (?, ?);', [req.body.username,req.body.picture_link],function(error, results, fields){
       
       if (error) throw error;
-      res.redirect('/roommate_quiz');
+
+        // selects the last id of the user that was inserted into the user table
+        connection.query('SELECT LAST_INSERT_ID() as id;', function(error, results, fields){
+      
+        if (error) throw error;
+        console.log(results[0].id);
+        req.session.users_id = results[0].id;
+        console.log(req.session.users_id);
+        res.redirect('/roommate_quiz');
+  
+      });  
 
     });
   }
@@ -74,9 +84,7 @@ app.post('/create_user', function(req, res){
 });
 
 
-app.get('/roommate_quiz', function(req, res) {
-  res.render('pages/roommate_quiz.ejs');
-});
+
 
 
 app.listen(3000);
