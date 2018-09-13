@@ -94,6 +94,30 @@ app.get('/roommate_quiz', function(req, res) {
 });
 
 
+app.post('/submit_q', function(req, res){
+  console.log(req.session.users_id);
+  
+    connection.query('INSERT INTO user_answers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);', [req.session.users_id, req.body.q_1, req.body.q_2, req.body.q_3, req.body.q_4, req.body.q_5, req.body.q_6, req.body.q_7, req.body.q_8, req.body.q_9, req.body.q_10],function(error, results, fields){
+      
+      if (error) throw error;
+      res.redirect('/results');
+
+    });    
+});
+
+app.get('/results', function(req, res){
+  if(req.session.users_id){
+
+    res.render('pages/results.ejs');
+  }
+  else{
+    res.redirect('/');
+  }
+    
+});
+
+
+
 
 
 app.listen(3000);
