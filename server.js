@@ -83,6 +83,15 @@ app.post('/create_user', function(req, res){
   }     
 });
 
+app.get('/roommate_quiz', function(req, res) {
+  if(req.session.users_id){
+
+      res.render('pages/roommate_quiz.ejs');
+  }
+  else{
+    res.redirect('/');
+  }
+});
 
 
 
