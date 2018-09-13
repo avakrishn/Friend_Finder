@@ -50,6 +50,20 @@ app.get('/', function(req, res) {
 });
 
 
+app.post('/create_user', function(req, res){
+  console.log(req.body);
+  if(req.body.username && req.body.picture_link){
+      
+    connection.query('INSERT INTO users (username, picture_link) VALUES (?, ?);', [req.body.username,req.body.picture_link],function(error, results, fields){
+      
+      if (error) throw error;
+      res.render('pages/roommate_quiz.ejs');
 
+    });
+  }
+  else{
+    res.redirect('/');
+  }     
+});
 
 app.listen(3000);
