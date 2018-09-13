@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+    
+</head>
+<body>
+    
+    <div>
+        <h1>Find Your Perfect Roommate!</h1>
+        <h3>Answer a few questions about your lifestyle.</h3>
+        <h3>Then get matched with the perfect roomate for you!</h3>
+        <form action="/create_user" method="POST">
+            <label for="username">Your Name: </label> <input type="text" name="username" id="username"><span>*</span>
+            <label for="picture_link">Link to a Picture of You: </label><input type="text" name="picture_link" id="picture_link"><span>*</span>
+            <button>Take Roomate Finder Quiz!</button>
+        </form>
+    </div>
+
+    <script src="/assets/javascript/app.js"></script>
+</body>
+</html>
