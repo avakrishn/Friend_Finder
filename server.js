@@ -136,7 +136,16 @@ app.get('/user', function(req, res){
     
 });
 
+app.get('/perfect_roommates', function(req, res){
 
+  connection.query('SELECT * FROM users WHERE id IN (?);',[req.query.userID], function(error, results, fields){
+      
+    if (error) throw error;
+    res.json(results);
+
+  });
+    
+});
 
 
 app.listen(3000);
