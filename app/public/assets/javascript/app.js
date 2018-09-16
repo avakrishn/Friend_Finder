@@ -107,22 +107,22 @@ function findRoommate(){
                     var roommates = $('<div>').html("<h3>Your Most Compatible Roommates are: <h3>");
 
                     for(var c in roommateRes){
-                        var newRoommate = $('<p>').html(roommateRes[c].username);
+                        var newRoommate = $('<h5>').html(roommateRes[c].username);
                         var newRoommateImg = $('<img>').attr("src", roommateRes[c].picture_link).addClass('imageSizeMany');
-                        var newDiv = $('<div>').addClass('roomate');
+                        var newDiv = $('<div>').addClass('roommate');
                         newDiv.append(newRoommate, newRoommateImg);
                         roommates.append(newDiv);
                     }
 
-                    var explain = $('<h4>').text("These Roommates Tied in being the Most Compatible Roommates for you.");
+                    var explain = $('<h6>').text("These Roommates Tied in being the Most Compatible Roommates for you.");
                     $('#results').append(roommates, explain);
                 }
                 // if there is only one previous user who is the most compatible roommate for the current user
                 else{
                     var roommates = $('<div>').html("<h3>Your Most Compatible Roommate is: <h3>");
-                    var newRoommate = $('<p>').html(roommateRes[0].username);
+                    var newRoommate = $('<h5>').html(roommateRes[0].username);
                     var newRoommateImg = $('<img>').attr("src", roommateRes[0].picture_link).addClass('imageSizeOne');
-                    var newDiv = $('<div>').addClass('roomate');
+                    var newDiv = $('<div>').addClass('roommate');
                     newDiv.append(newRoommate, newRoommateImg);
                     roommates.append(newDiv);
                     $('#results').append(roommates);
