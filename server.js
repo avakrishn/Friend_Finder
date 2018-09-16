@@ -116,6 +116,16 @@ app.get('/results', function(req, res){
     
 });
 
+app.get('/potential_roommates', function(req, res){
+  connection.query('SELECT * FROM user_answers WHERE NOT users_id = ?;',[req.session.users_id], function(error, results, fields){
+      
+    if (error) throw error;
+    res.json(results);
+
+  });
+    
+});
+
 
 
 
