@@ -126,7 +126,15 @@ app.get('/potential_roommates', function(req, res){
     
 });
 
+app.get('/user', function(req, res){
+  connection.query('SELECT * FROM user_answers WHERE users_id = ?;',[req.session.users_id], function(error, results, fields){
+      
+    if (error) throw error;
+    res.json(results);
 
+  });
+    
+});
 
 
 
