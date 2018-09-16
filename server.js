@@ -12,6 +12,7 @@ var validUrl = require('valid-url');
 var methodOverride = require('method-override');
 // var bcrypt = require('bcryptjs');
 var bodyParser = require('body-parser');
+
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var path = require("path");
@@ -19,6 +20,7 @@ var path = require("path");
 app.use(methodOverride('_method'));
 app.use(session({ secret: 'app', cookie: { maxAge: 1*1000*60*60*24*365 }}));
 app.use(cookieParser());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -28,8 +30,9 @@ app.use(bodyParser.json());
 
 app.use(express.static("app/public"));
 
-//sets EJS available
-// app.set('view engine', 'ejs');
+// sets EJS available
+app.set('view engine', 'ejs');
+
 
 // Initializes the connection variable to sync with a MySQL database
 var connection = mysql.createConnection({
@@ -47,6 +50,8 @@ var connection = mysql.createConnection({
 
   
 });
+
+
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'app/public/index.html'));
@@ -86,7 +91,7 @@ app.post('/create_user', function(req, res){
 app.get('/roommate_quiz', function(req, res) {
   if(req.session.users_id){
 
-      res.render(__dirname + '/app/views/pages/roommate_quiz.ejs');
+      res.render(__dirname + '/app/views/pages/roommate_quiz');
   }
   else{
     res.redirect('/');
@@ -108,7 +113,7 @@ app.post('/submit_q', function(req, res){
 app.get('/results', function(req, res){
   if(req.session.users_id){
 
-    res.render(__dirname + '/app/views/pages/results.ejs');
+    res.render(__dirname + '/app/views/pages/results');
   }
   else{
     res.redirect('/');
