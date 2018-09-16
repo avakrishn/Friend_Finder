@@ -10,108 +10,113 @@
 	</header>
 
 	<main>
-        <form onsubmit="submitAnswers()">
+        <form onsubmit="submitAnswers()" id="questions">
+                <div class='row'>
+                        <div class='column' id="columnOne">
+                                <label for="q_1"><h2>Question 1</h2><h4>I value my privacy.</h4></label>
+                                <select name="q_1" id="q_1" class="question">
+                                <option value="" selected disabled>Select An Option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2 </option>
+                                <option value="3">3 </option>
+                                <option value="4">4 </option>
+                                <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_1"><h2>Question 1</h2><h3>I value my privacy.</h3></label>
-            <select name="q_1" id="q_1" class="question">
-                <option value="" selected disabled>Select An Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2 </option>
-                <option value="3">3 </option>
-                <option value="4">4 </option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_2"><h2>Question 2</h2><h4>I keep my living space clean and can't live with anyone messy.</h4></label>
+                                <select name="q_2" id="q_2" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_2"><h2>Question 2</h2><h3>I keep my living space clean and can't live with anyone messy.</h3></label>
-            <select name="q_2" id="q_2" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_3"><h2>Question 3</h2><h4>I’d describe myself as a “late night” person. I‘m usually up past midnight most nights. </h4></label>
+                                <select name="q_3" id="q_3" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_3"><h2>Question 3</h2><h3>I’d describe myself as a “late night” person. I‘m usually up past midnight most nights. </h3></label>
-            <select name="q_3" id="q_3" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_4"><h2>Question 4</h2><h4>I prefer to study/ work in silence.</h4></label>
+                                <select name="q_4" id="q_4" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_4"><h2>Question 4</h2><h3>I prefer to study/ work in silence.</h3></label>
-            <select name="q_4" id="q_4" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_5"><h2>Question 5</h2><h4>Generally speaking, I don’t mind if my roommate borrows any of my things. </h4></label>
+                                <select name="q_5" id="q_5" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                        </div>
 
-            <label for="q_5"><h2>Question 5</h2><h3>Generally speaking, I don’t mind if my roommate borrows any of my things. </h3></label>
-            <select name="q_5" id="q_5" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                        <div class='column'>
+                                <label for="q_6"><h2>Question 6</h2><h4>Eating my food without asking is a definite problem.</h4></label>
+                                <select name="q_6" id="q_6" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_6"><h2>Question 6</h2><h3>Eating my food without asking is a definite problem.</h3></label>
-            <select name="q_6" id="q_6" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_7"><h2>Question 7</h2><h4>I like Loud Music.</h4></label>
+                                <select name="q_7" id="q_7" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_7"><h2>Question 7</h2><h3>I like Loud Music.</h3></label>
-            <select name="q_7" id="q_7" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_8"><h2>Question 8</h2><h4>I'm a talkative person.</h4></label>
+                                <select name="q_8" id="q_8" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_8"><h2>Question 8</h2><h3>I'm a talkative person.</h3></label>
-            <select name="q_8" id="q_8" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
+                                <label for="q_9"><h2>Question 9</h2><h4>I like sleeping with the window open.</h4></label>
+                                <select name="q_9" id="q_9" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
 
-            <label for="q_9"><h2>Question 9</h2><h3>I like sleeping with the window open.</h3></label>
-            <select name="q_9" id="q_9" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
-
-            <label for="q_10"><h2>Question 10</h2><h3>I am hoping the relationship with my roommate will result in a strong friendship.</h3></label>
-            <select name="q_10" id="q_10" class="question">
-                    <option value="" selected disabled>Select An Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2 </option>
-                    <option value="3">3 </option>
-                    <option value="4">4 </option>
-                    <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <button>Submit</button>
+                                <label for="q_10"><h2>Question 10</h2><h4>I am hoping the relationship with my roommate will result in a strong friendship.</h4></label>
+                                <select name="q_10" id="q_10" class="question">
+                                        <option value="" selected disabled>Select An Option</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 </option>
+                                        <option value="3">3 </option>
+                                        <option value="4">4 </option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                        </div>
+                </div>
+                <button id="qButton">Submit</button>
         </form>
 	</main>
 
