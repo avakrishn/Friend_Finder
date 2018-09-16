@@ -1,3 +1,86 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(0, 0, 0, 0.86);
+    background-image: url("../images/background.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover; 
+}
+div{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+main{
+    height: 30rem;
+    overflow-y: scroll;
+}
+h1{
+    font-size: 3rem;
+    margin: 2% 0 2% 0;
+    /* color: rgb(113, 211, 235); */
+    color: rgb(113, 176, 235);
+
+}
+h3{
+    font-size: 1.7rem;
+    margin: 0 0 3% 0;
+    color: rgb(113, 131, 235);
+    
+}
+form#newUser{
+    font-size: 1.5rem;
+    margin: 0 auto;
+    width: fit-content;
+    /* margin-top: 5%; */
+    border: thin darkblue solid;
+    border-radius: 5px;
+    background-color: rgba(242, 247, 248, 0.952);
+    padding: 3% 10% 3% 10%;
+    text-align: left;
+}
+
+li{
+   list-style: none;
+   margin: 4% 0 4% 0; 
+}
+
+input{
+    height: 25px;
+    width: 90%;
+    font-size: 0.9rem;
+}
+
+#username{
+    margin: 3% 0 5% 0;
+}
+#picture_link{
+    margin: 3% 0 3% 0;
+
+}
+span{
+    padding-left: 2%;
+    color: red;
+}
+p{
+    font-size: 1.1rem;
+    color: blue;
+}
+button{
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 4%;
+    border-radius: 5px;
+    background-color: rgb(8, 8, 161);
+    color: white;
+}
+button:hover{
+    background-color: navy;
+    cursor: pointer;
+}
+
 .imageSizeOne{
     height: 400px;
     width: auto;
@@ -8,3 +91,4 @@
     height: 200px;
     width: auto;
 }
+
