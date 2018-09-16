@@ -14,11 +14,16 @@
     <div>
         <h1>Find Your Perfect Roommate!</h1>
         <h3>Answer a few questions about your lifestyle.</h3>
-        <h3>Then get matched with the perfect roomate for you!</h3>
-        <form onsubmit="createUser()">
-            <label for="username">Your Name: </label> <input type="text" name="username" id="username"><span>*</span>
-            <label for="picture_link">Link to a Picture of You: </label><input type="text" name="picture_link" id="picture_link"><span>*</span>
-            <button>Find your New Roommate!</button>
+        <h3>Then get matched with the Most Compatible Roomate(s) for You!</h3>
+        <form id="newUser" onsubmit="createUser()" >
+            <li>
+                <label for="username">Your Name: </label> <input type="text" name="username" id="username"><span>*</span>
+            </li>
+            <li>
+                <label for="picture_link">Link to Your Picture: </label><input type="text" name="picture_link" id="picture_link"><span>*</span>
+                <p>Please enter a valid image address</p>
+            </li>
+            <button>Find your New Roommate(s)!</button>
         </form>
     </div>
 
