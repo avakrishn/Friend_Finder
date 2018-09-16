@@ -7,15 +7,17 @@ body{
     background-position: bottom;
     background-size: cover; 
 }
-div{
+#newUserDiv{
     width: 60%;
     text-align: center;
     margin: 0 auto;
 }
 
 main{
-    height: 30rem;
+    text-align: center;
+    height: 32rem;
     overflow-y: scroll;
+    margin: 0 2% 0 2%;
 }
 h1{
     font-size: 3rem;
@@ -26,7 +28,7 @@ h1{
 }
 h3{
     font-size: 1.7rem;
-    margin: 0 0 3% 0;
+    margin: 1% 0 3% 0;
     color: rgb(113, 131, 235);
     
 }
@@ -75,14 +77,53 @@ button{
     border-radius: 5px;
     background-color: rgb(8, 8, 161);
     color: white;
+    border-color: navy;
 }
 button:hover{
     background-color: navy;
     cursor: pointer;
+    border-color: navy;
+}
+
+#questions{
+    border: thin darkblue solid;
+    border-radius: 5px;
+    background-color: rgba(242, 247, 248, 0.952);
+    padding: 2% 10% 1% 10%;
+}
+
+.row {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    flex: 50%;
+}
+#columnOne{
+    padding-right: 6%;
+}
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+    color:  rgb(8, 8, 161);
+}
+h4{
+    font-size: 1.1rem;
+    margin-bottom: 1%;
+    clear: both;
+}
+select{
+    margin-bottom: 2%;
+}
+#qButton{
+    margin-top: 2%;
 }
 
 .imageSizeOne{
-    height: 400px;
+    height: 300px;
     width: auto;
 
 }
@@ -92,3 +133,40 @@ button:hover{
     width: auto;
 }
 
+.roommate{
+    display: inline-block;
+    text-align: center;
+    padding: 1% 2% 1% 0%;
+}
+
+h5{
+    font-size: 1.7rem;
+    color: rgb(209, 200, 250);
+    margin-bottom: 2%;
+}
+
+a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 4%;
+    border-radius: 5px;
+    background-color: rgb(113, 176, 235);
+    color: navy;
+}
+
+a:hover{
+    background-color: rgb(78, 142, 201);
+    cursor: pointer;
+   
+}
+
+h6{
+    font-size: 1.5rem;
+    color: rgb(113, 131, 235);
+    margin-bottom: 2%;
+}
+
+img{
+    margin-bottom: 3%;
+}
