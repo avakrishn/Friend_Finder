@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 // you need this line here so you don't have to create a route for every single file in the public folder (css, js, image, etc)
 //index.html in the public folder will over ride the root route
 
-app.use(express.static("public"));
+app.use(express.static("app/public"));
 
 //sets EJS available
 // app.set('view engine', 'ejs');
@@ -49,7 +49,7 @@ var connection = mysql.createConnection({
 });
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, 'app/public/index.html'));
 });
 
 
@@ -67,13 +67,13 @@ app.post('/create_user', function(req, res){
         // selects the last id of the user that was inserted into the user table
         connection.query('SELECT LAST_INSERT_ID() as id;', function(error, results, fields){
       
-        if (error) throw error;
-        console.log(results[0].id);
-        req.session.users_id = results[0].id;
-        console.log(req.session.users_id);
-        res.redirect('/roommate_quiz');
+          if (error) throw error;
+          console.log(results[0].id);
+          req.session.users_id = results[0].id;
+          console.log(req.session.users_id);
+          res.redirect('/roommate_quiz');
   
-      });  
+        });  
 
     });
   }
@@ -86,7 +86,7 @@ app.post('/create_user', function(req, res){
 app.get('/roommate_quiz', function(req, res) {
   if(req.session.users_id){
 
-      res.render('pages/roommate_quiz.ejs');
+      res.render(__dirname + '/app/views/pages/roommate_quiz.ejs');
   }
   else{
     res.redirect('/');
@@ -108,13 +108,14 @@ app.post('/submit_q', function(req, res){
 app.get('/results', function(req, res){
   if(req.session.users_id){
 
-    res.render('pages/results.ejs');
+    res.render(__dirname + '/app/views/pages/results.ejs');
   }
   else{
     res.redirect('/');
   }
     
 });
+
 
 
 
